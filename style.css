@@ -112,6 +112,8 @@ section { padding: 6rem var(--pad-x); }
 
 .about-text { font-size: 1.15rem; font-weight: 300; color: var(--mid); max-width: 600px; line-height: 1.8; }
 .about-text p + p { margin-top: 1.4rem; }
+.about-text a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.15s; }
+.about-text a:hover { border-bottom-color: var(--ink); }
 
 /* Green footer */
 footer {
