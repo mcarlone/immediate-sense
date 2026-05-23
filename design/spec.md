@@ -2,17 +2,31 @@
 
 ## Typography
 
-**Font:** Source Serif 4 (Google Fonts)
-- Import: `https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,700;1,300&display=swap`
-- This is the only font used across the entire site. No sans-serif fallbacks in the UI.
+Two typefaces, both from Google Fonts:
 
-| Role | Weight | Notes |
-|---|---|---|
-| Hero wordmark | 700 | Large display, tight tracking (-0.03em) |
-| Nav wordmark | 700 | Small, minimal tracking |
-| Body / descriptions | 300 | Always light weight for prose |
-| Section labels | 400 | Spaced caps, uppercase |
-| Metadata | 300 | Spaced caps, uppercase |
+- **Wordmark:** Titan One, 400. Title case. Used only for the "Immediate Sense" wordmark.
+- **Supporting type:** Inter, 300 (400 for headings). Everything else.
+
+Import (one line gets both):
+`https://fonts.googleapis.com/css2?family=Titan+One&family=Inter:wght@300;400&display=swap`
+
+| Role | Font | Weight | Notes |
+|---|---|---|---|
+| Hero wordmark | Titan One | 400 | Large display, two-color (see below) |
+| Nav wordmark | Titan One | 400 | Small, two-color (see below) |
+| Footer wordmark | Titan One | 400 | White on green, single color |
+| Work item title | Inter | 400 | 2rem |
+| Body / descriptions | Inter | 300 | Always light weight for prose |
+| Section labels | Inter | 400 | Spaced caps, uppercase |
+| Metadata | Inter | 300 | Spaced caps, uppercase |
+
+### Wordmark color
+
+The wordmark is two-color on light backgrounds:
+- "Immediate" — `#111111`
+- "Sense" — `#3d7a28` (`--wordmark-leaf`)
+
+On the green footer the wordmark stays single-color white (`#faf7f2`).
 
 ---
 
@@ -31,15 +45,24 @@
 
 ## Green Usage Rules
 
-Green (`--leaf`) is **structural only**. It never appears on text.
+There are two greens, split by job:
 
-Approved uses:
+- **`--leaf` (`#5c9e42`)** — green as a *fill or border*. Bright; reads well as a solid shape.
+- **`--wordmark-leaf` (`#3d7a28`)** — green as *text*. Darker so it stays legible on the warm paper background.
+
+Approved fill/border uses (`--leaf`):
 - Top bar: 5px full-width bar at the very top of the page
 - Footer background: full green footer with white text
+- Hero left border (6px)
+- Nav-link hover underline (2px border)
+
+Approved text uses (`--wordmark-leaf`):
+- Wordmark "Sense"
+- Work-item title link on hover
 
 Do not use green on:
-- Any text element
-- Borders, rules, or dividers within the content area
+- Body prose or descriptions
+- Dividers/rules in the content area
 - Backgrounds of sections or cards
 
 ---
@@ -79,14 +102,14 @@ Do not use green on:
 
 ### Work Items
 - Two-column grid: title/meta left, description right
-- Title: 700 weight, 2rem
-- Meta: 300 weight, spaced caps, `--light`
-- "Available" status: `--leaf`, 600 weight
+- Title: Inter 400, 2rem
+- Meta: Inter 300, spaced caps, `--light`
+- "Available" status: `--light`, Inter 400 (same color as meta)
 
 ### Footer
 - Background: `--leaf`
-- Wordmark: white (`#faf7f2`), 700 weight
-- Copyright: white at 50% opacity, 300 weight
+- Wordmark: Titan One, white (`#faf7f2`), single color
+- Copyright: Inter, white at 50% opacity, 300 weight
 
 ---
 
