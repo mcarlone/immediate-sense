@@ -95,6 +95,7 @@ Do not use green on:
 ### Hero
 - Wordmark breaks across two lines: `Immediate<br>Sense`
 - Body copy: 300 weight, `--mid`, max-width 520px
+- Green left border (`--leaf`) sits on the content wrapper, not the section — it spans the content height and ends where the copy ends, so it stays anchored on short (mobile) viewports rather than running into the section's padding
 
 ### Section Labels
 - Small spaced caps in `--light`
