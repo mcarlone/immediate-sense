@@ -71,7 +71,7 @@ Do not use green on:
 
 - Max content width: `640–900px` depending on section
 - Base padding: `4rem` horizontal on all sections
-- Hero padding: `8rem 4rem 7rem`
+- Hero padding: `8rem 4rem 3rem 0` — top-weighted on purpose so the content (and its accent line) settle toward the divider rather than floating centered. On mobile (≤680px) the top drops to `3.5rem` so the wordmark sits close to the nav instead of floating mid-section
 - Section padding: `6rem 4rem`
 - Nav padding: `2.2rem 4rem`
 
@@ -95,6 +95,7 @@ Do not use green on:
 ### Hero
 - Wordmark breaks across two lines: `Immediate<br>Sense`
 - Body copy: 300 weight, `--mid`, max-width 520px
+- Green left border (`--leaf`) sits on the content wrapper, not the section — it spans the content height and ends where the copy ends, so it stays anchored on short (mobile) viewports rather than running into the section's padding
 
 ### Section Labels
 - Small spaced caps in `--light`
